@@ -13,7 +13,13 @@ Goodies
 -------
 ::
 
-   brew install wget
+   brew install wget scons 
+
+Add missing right-ctrl key
+--------------------------
+
+Download and install 
+`KeyRemap4MacBook <https://pqrs.org/macosx/keyremap4macbook>`_.
 
 Fix X11 error
 -------------
@@ -37,7 +43,7 @@ To fix `X11 forwarding request failed on channel 0` error:
 Emacs over SSH
 --------------
 
-To run emacs with XForwarding, we gotta build emavs from source.
+To run emacs with XForwarding, we gotta build emacs from source.
 
 See http://stackoverflow.com/questions/22735651/how-to-run-emacs-in-ssh-x-from-linux-to-mac-os-x-with-xforwarding/22736527#22736527.
 
@@ -51,3 +57,9 @@ Get prerequisites, config and make:
    ./configure --with-x --with-gif=no
    make
    make install
+
+Duh
+---
+
+#. Switch between different applications with Cmd-Tab
+#. Switch between windows of same application with Cmd-`
