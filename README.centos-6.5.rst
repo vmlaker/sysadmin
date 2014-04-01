@@ -61,3 +61,21 @@ Git
    make prefix=/usr/local all
    sudo make prefix=/usr/local install
 
+Httpd
+-----
+
+Start:
+::
+
+   sudo service httpd start
+
+Stop:
+::
+
+   sudo service httpd stop
+   
+Configure auto-start:
+::
+
+   sudo chkconfig httpd on
+
