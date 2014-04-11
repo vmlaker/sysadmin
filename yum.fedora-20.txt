@@ -1,0 +1,9 @@
+tcsh
+emacs
+openssh-server
+tkcvs
+
+numpy
+MySQL-python
+opencv-python
+opencv-devel
