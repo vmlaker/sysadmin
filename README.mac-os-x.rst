@@ -11,9 +11,15 @@ Homebrew
 
 Goodies
 -------
-::
 
+Get some stuff. Get OpenCV by first tapping the *science* repo.
+Be sure to update.
+::
+   
    brew install wget scons 
+   brew tap science
+   brew install opencv
+   brew update
 
 Add missing right-ctrl key
 --------------------------
