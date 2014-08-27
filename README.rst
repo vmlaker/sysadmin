@@ -8,6 +8,7 @@ Running OSs and stuff.
 * `Ubuntu 14.04 <README.ubuntu-14.04.rst>`_
 * `Xubuntu 14.04 <README.xubuntu-14.04.rst>`_
 * `Mac OS X <README.mac-os-x.rst>`_
+* `Apache HTTPD <README.apache-httpd.rst>`_
 
 yum
 ---
