@@ -16,6 +16,13 @@ yum
 
    yum install `cat yum.fedora-20.txt`
 
+Access to X when running sudo
+-----------------------------
+::
+
+   xauth extract my-cookie-file $DISPLAY
+   sudo su -
+   xauth merge my-cookie-file
 
 XML
 ---
