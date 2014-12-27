@@ -3,12 +3,14 @@ sysadmin
 
 Running OSs and stuff.
 
+* `Apache HTTPD <README.apache-httpd.rst>`_
 * `CentOS 6.5 <README.centos-6.5.rst>`_
+* `CentOS 7 <README.centos-7.rst>`_
 * `Fedora 20 <README.fedora-20.rst>`_
+* `Mac OS X <README.mac-os-x.rst>`_
+* `Red Hat EL 6 <README.rhel-6.rst>`_
 * `Ubuntu 14.04 <README.ubuntu-14.04.rst>`_
 * `Xubuntu 14.04 <README.xubuntu-14.04.rst>`_
-* `Mac OS X <README.mac-os-x.rst>`_
-* `Apache HTTPD <README.apache-httpd.rst>`_
 
 yum
 ---
