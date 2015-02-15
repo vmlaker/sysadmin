@@ -19,3 +19,15 @@ fail2ban
 
    service fail2ban restart
 
+Python 2.7
+----------
+::
+
+   sh -c 'wget -qO- http://people.redhat.com/bkabrda/scl_python27.repo >> /etc/yum.repos.d/scl.repo'
+   yum install python27  
+
+Gparted with fonts:
+-------------------
+::
+
+   yum install gparted xorg-x11-font*
