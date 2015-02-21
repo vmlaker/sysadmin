@@ -3,7 +3,7 @@ Apach HTTPD
 
 Proxy with HTML rewrite
 -----------------------
-Say you want to host anothersite.com content at your site's ``/asdf`` location, use:
+Say you want to proxy anothersite.com content at your site's ``/asdf`` location, use:
 ::
 
     ProxyRequests Off
@@ -15,3 +15,14 @@ Say you want to host anothersite.com content at your site's ``/asdf`` location, 
         RequestHeader unset Accept-Encoding
     </Location>
     SetOutputFilter proxy-html
+
+or, another example, this time proxying ``http://chef/wabbit`` at your site's ``/bunny`` path: 
+::
+
+   <Location /bunny>
+     ProxyPass http://chef/wabbit
+     ProxyPassReverse http://chef/wabbit
+     ProxyHTMLURLMap http://chef/wabbit
+     AddOutputFilterByType SUBSTITUTE text/html
+     Substitute "s|wabbit/|bunny/|ni"
+   </Location>
