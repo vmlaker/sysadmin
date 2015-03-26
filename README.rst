@@ -6,6 +6,7 @@ Running OSs and stuff.
 * `Apache HTTPD <README.apache-httpd.rst>`_
 * `CentOS 6.5 <README.centos-6.5.rst>`_
 * `CentOS 7 <README.centos-7.rst>`_
+* `Debian 8 <README.debian-8.rst>`_
 * `Fedora 20 <README.fedora-20.rst>`_
 * `Mac OS X <README.mac-os-x.rst>`_
 * `Red Hat EL 6 <README.rhel-6.rst>`_
