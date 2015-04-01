@@ -1,6 +1,13 @@
 Apach HTTPD
 ===========
 
+SSL certificate
+---------------
+Create a 10-year self-signed certificate:
+::
+
+   openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout server_name.key -out server_name.crt
+
 Proxy with HTML rewrite
 -----------------------
 Say you want to proxy anothersite.com content at your site's ``/asdf`` location, use:
