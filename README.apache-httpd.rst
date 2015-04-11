@@ -58,3 +58,22 @@ Redirect from HTTPS to HTTP
      RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI}
      ...
    </VirtualHost>
+
+URL substitute
+--------------
+Flask's ``url_for()`` in Jinja templates generates URLs prefixed with
+forward slash. But if you're deploying the site in a domain sub-path
+(e.g. http://example.com/my/app) you will need to make the substitution
+in all URL strings.
+::
+
+   RewriteRule  ^/my/app$  /my/app/  [R]
+   <Location /my/app/>
+       ProxyPass http://localhost:5000/
+       ProxyPassReverse http://localhost:5000/
+       AddOutputFilterByType SUBSTITUTE text/html
+       Substitute s;href="/;href="/my/app/;n
+       Substitute s;src="/;src="/my/app/;n
+       ProxyPassReverse /
+       RequestHeader unset Accept-Encoding
+   </Location>
