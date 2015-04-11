@@ -34,8 +34,16 @@ or, another example, this time proxying ``http://chef/wabbit`` at your site's ``
      Substitute "s|wabbit/|bunny/|ni"
    </Location>
 
-Redirect from HTTP to HTTPS
----------------------------
+Redirect all traffic to HTTPS
+-----------------------------
+::
+
+   RewriteEngine On
+   RewriteCond %{HTTPS} !on
+   RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+Redirect select path from HTTP to HTTPS
+---------------------------------------
 ::
 
    <VirtualHost *:80>
