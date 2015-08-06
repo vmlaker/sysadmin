@@ -85,3 +85,13 @@ in all URL strings.
        ProxyPassReverse /
        RequestHeader unset Accept-Encoding
    </Location>
+
+Restrict direct IP access
+-------------------------
+::
+
+   <VirtualHost *:80>
+      ServerName localhost
+      Redirect 403 /
+      UseCanonicalName Off
+   </VirtualHost>
