@@ -1,6 +1,13 @@
 Raspberry Pi 2
 ==============
 
+Fix network disconnects (from http://raspberrypi.stackexchange.com/a/5341):
+::
+
+   sudo cp /etc/ifplugd/action.d/ifupdown /etc/ifplugd/action.d/ifupdown.`date +%Y-%m-%d`
+   sudo ln -sf ../../wpa_supplicant/ifupdown.sh /etc/ifplugd/action.d/ifupdown
+
+
 From a post by Vegator at
 http://linuxonflash.blogspot.com/2015/02/a-look-at-raspberry-pi-2-performance.html
 
