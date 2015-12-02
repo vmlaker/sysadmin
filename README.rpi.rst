@@ -7,6 +7,17 @@ Fix network disconnects (from http://raspberrypi.stackexchange.com/a/5341):
    sudo cp /etc/ifplugd/action.d/ifupdown /etc/ifplugd/action.d/ifupdown.`date +%Y-%m-%d`
    sudo ln -sf ../../wpa_supplicant/ifupdown.sh /etc/ifplugd/action.d/ifupdown
 
+Disable the ACT LED by adding to ``/boot/config.txt``:
+::
+
+   dtparam=act_led_trigger=none
+   dtparam=act_led_activelow=off
+
+Disable the PWR LED by adding to ``/boot/config.txt``:
+::
+
+   dtparam=pwr_led_trigger=none
+   dtparam=pwr_led_activelow=off
 
 From a post by Vegator at
 http://linuxonflash.blogspot.com/2015/02/a-look-at-raspberry-pi-2-performance.html
