@@ -19,6 +19,22 @@ Disable the PWR LED by adding to ``/boot/config.txt``:
    dtparam=pwr_led_trigger=none
    dtparam=pwr_led_activelow=off
 
+Reduce memory usage by Apache HTTPD. Default settings
+start two processes of about 222MB each. This can be reduced
+to one process of about 145MB by changing the *worker MPM* settings
+in file ``/etc/apache2/apache2.conf`` to:
+::
+
+   <IfModule mpm_worker_module>
+       StartServers          1
+       MinSpareThreads       5
+       MaxSpareThreads      25 
+       ThreadLimit          64
+       ThreadsPerChild      15
+       MaxClients           50
+       MaxRequestsPerChild   0
+   </IfModule>
+
 From a post by Vegator at
 http://linuxonflash.blogspot.com/2015/02/a-look-at-raspberry-pi-2-performance.html
 
