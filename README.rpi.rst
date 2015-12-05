@@ -19,6 +19,19 @@ Disable the PWR LED by adding to ``/boot/config.txt``:
    dtparam=pwr_led_trigger=none
    dtparam=pwr_led_activelow=off
 
+Replace the default 100MB swap with USB stick:
+::
+
+   sudo swapoff --all
+   sudo dphys-swapfile swapoff
+   sudo update-rc.d -f dphys-swapfile remove
+
+   sudo fdisk /dev/sda  
+   sudo mkswap /dev/sda
+   sudo swapon /dev/sda
+   free -m
+   sudo echo '/dev/sda none swap defaults 0 0' >> /etc/fstab
+
 Reduce memory usage by Apache HTTPD. Default settings
 start two processes of about 222MB each. This can be reduced
 to one process of about 145MB by changing the *worker MPM* settings
