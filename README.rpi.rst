@@ -19,18 +19,30 @@ Disable the PWR LED by adding to ``/boot/config.txt``:
    dtparam=pwr_led_trigger=none
    dtparam=pwr_led_activelow=off
 
-Replace the default 100MB swap with USB stick:
+Replace the default 100MB swap:
 ::
 
    sudo swapoff --all
    sudo dphys-swapfile swapoff
    sudo update-rc.d -f dphys-swapfile remove
 
+
+Add swap on USB stick:
+::
+
    sudo fdisk /dev/sda  
    sudo mkswap /dev/sda
    sudo swapon /dev/sda
    free -m
    sudo echo '/dev/sda none swap defaults 0 0' >> /etc/fstab
+
+Reduce power usage by adding a cronjob that checks if it's ON,
+and if so, turns it OFF. We do this in a cronjob with small delay,
+so that we have some time after booting to disable the control:
+::
+
+   MAILTO=""
+   * * * * * sleep 20; tvservice -s | grep 'TV is off' ; if [ $? -eq 1 ] ; then tvservice -o ; fi 
 
 Reduce memory usage by Apache HTTPD. Default settings
 start two processes of about 222MB each. This can be reduced
