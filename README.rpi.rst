@@ -19,13 +19,13 @@ Disable the PWR LED by adding to ``/boot/config.txt``:
    dtparam=pwr_led_trigger=none
    dtparam=pwr_led_activelow=off
 
-Replace the default 100MB swap:
+Disable the default 100MB swap:
 ::
 
    sudo swapoff --all
    sudo dphys-swapfile swapoff
    sudo update-rc.d -f dphys-swapfile remove
-
+   sudo rm -rf /var/swap
 
 Add swap on USB stick:
 ::
