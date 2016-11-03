@@ -14,6 +14,9 @@ Running OSs and stuff.
 * `Ubuntu 14.04 <README.ubuntu-14.04.rst>`_
 * `Xubuntu 14.04 <README.xubuntu-14.04.rst>`_
 
+`Git stuff <README.git.rst>`_
+-----------------------------
+
 yum
 ---
 ::
