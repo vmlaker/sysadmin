@@ -8,12 +8,12 @@ So you want to create a brand new repository containing
 files from a subdirectory in an existing repository,
 while preserving history.
 No problem, just follow this example.
-Let's assume the existing repo is called `repo1` and the
-subdirectory of interest is `repo1/foo/bar`
-at revision `0123456789abcdef`.
-And let's assume the new repo will be called `repo2`.
+Let's assume the existing repo is called ``repo1`` and the
+subdirectory of interest is ``repo1/foo/bar``
+at revision ``0123456789abcdef``.
+And let's assume the new repo will be called ``repo2``.
 
-First move the directory `repo1/foo/bar`:
+First move the directory ``repo1/foo/bar``:
 ::
 
    cd repo1
@@ -24,7 +24,7 @@ First move the directory `repo1/foo/bar`:
    git filter-branch --prune-empty --subdirectory-filter foo/bar
 
 
-Now create a new empty repo called `repo1`.
+Now create a new empty repo called ``repo2``.
 
 Next, add the remote origin in the new repo:
 ::
