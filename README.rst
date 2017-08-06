@@ -17,6 +17,14 @@ Running OSs and stuff.
 `Git stuff <README.git.rst>`_
 -----------------------------
 
+md5sum of directory
+------------------
+(Based on https://unix.stackexchange.com/a/35834/108130.)
+
+::
+   
+   find . -type f -exec md5sum {} \; | sort -k 2 | md5sum
+
 yum
 ---
 ::
