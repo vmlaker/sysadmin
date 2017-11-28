@@ -2,36 +2,34 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-        server_name _;
-        return 301 https://$host$request_uri;
+	server_name _;
+	return 301 https://$host$request_uri;
 
-	root /var/www/html;
+	#root /var/www/html;
 
 	index index.html index.htm index.nginx-debian.html;
-
-	server_name _;
 
 	location / {
 		try_files $uri $uri/ =404;
 	}
 }
 
-
 server {
- 	listen 443 ssl default_server;
+	listen 443 ssl default_server;
 	listen [::]:443 ssl default_server;
 
-        include snippets/snakeoil.conf;
+	include snippets/snakeoil.conf;
 
         server_name _;
 
-	root /var/www/html;
+	#root /var/www/html;
 
 	index index.html index.htm index.nginx-debian.html;
 
-	server_name _;
-
-	location / {
+	location = /eingang { rewrite ^ /eingang/; }
+	location /eingang { try_files $uri @eingang; }
+	location @eingang {
+		 uwsgi_pass unix:/tmp/eingang.sock;
+		 include uwsgi_params;
 	}
-
 }
