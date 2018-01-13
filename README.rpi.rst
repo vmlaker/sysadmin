@@ -1,6 +1,36 @@
 Raspberry Pi 2
 ==============
 
+Network
+-------
+
+1) Enable and start services:
+::
+
+   systemctl enable ssh wpa_supplicant
+   systemctl start ssh wpa_supplicant
+  
+2) `/etc/network/interfaces`:
+::
+
+   auto wlan0
+   iface wlan0 inet static
+      address <static_ip>
+      netmask 255.255.255.0
+      gateway <router_ip>
+      dns-nameservers <isp_nameserver>
+      wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+3) wpa supplicant:
+::
+
+   wpa_cli
+   > add_network
+   > set_network 0 ssid "<ssid>"
+   > set network 0 psk "<psk>"
+   > enable_network 0
+   > save_config
+
 Fix network disconnects (from http://raspberrypi.stackexchange.com/a/5341):
 ::
 
