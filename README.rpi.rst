@@ -1,6 +1,29 @@
 Raspberry Pi 2
 ==============
 
+Setup
+-----
+
+#. Download https://www.raspberrypi.org/downloads:
+   ::
+
+      wget https://downloads.raspberrypi.org/raspbian_lite_latest
+      unzip raspbian_lite_latest
+      sudo umount /dev/sdb1 /dev/sdb2
+      dd bs=4M if=xxx.img of=/dev/sdb status=progress conv=fsync
+   
+#. Boot. A message should flash indicating that the filesystem is resized.
+   Login with username pi, password raspberry.
+
+#. Check out the system:
+   ::
+
+      df -h
+      lscpu
+      vcgencmd measure_temp
+      vcgencmd measure_volts
+
+
 Network
 -------
 
@@ -27,7 +50,7 @@ Network
    wpa_cli
    > add_network
    > set_network 0 ssid "<ssid>"
-   > set network 0 psk "<psk>"
+   > set_network 0 psk "<psk>"
    > enable_network 0
    > save_config
 
