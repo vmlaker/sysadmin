@@ -18,7 +18,7 @@ Running OSs and stuff.
 -----------------------------
 
 md5sum of directory
-------------------
+-------------------
 (Based on https://unix.stackexchange.com/a/35834/108130.)
 
 ::
