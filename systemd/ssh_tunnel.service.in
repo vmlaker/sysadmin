@@ -1,0 +1,13 @@
+[Unit]
+Description=SSH Tunnel
+
+[Service]
+Type=simple
+User=@USER@
+Group=@GROUP@
+ExecStart=/bin/bash -c 'ssh -N -T -R 8881:localhost:22 @HOST@'
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
