@@ -75,11 +75,15 @@ Disable the PWR LED by adding to ``/boot/config.txt``:
 Disable the default 100MB swap:
 ::
 
+   free -h
+   ls -la /etc/dphys-swapfile
    sudo swapoff --all
    sudo dphys-swapfile swapoff
+   sudo systemctl disable dphys-swapfile
    sudo update-rc.d -f dphys-swapfile remove
+   free -h
    sudo rm -rf /var/swap
-
+   
 Add swap on USB stick:
 ::
 
