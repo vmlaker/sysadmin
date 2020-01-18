@@ -1,16 +1,12 @@
-""" Execute a command for each word in a file.
+""" Execute a command for each line in stdin.
 """
 
 import sys
 from subprocess import call
 
-input_file = sys.argv[1]
-command_template = sys.argv[2]
+command_template = sys.argv[1]
 
-with open(input_file) as ff:
-    items = (x.strip() for x in ff.readlines())
-
-for item in items:
+for item in (x.strip() for x in sys.stdin):
     command = command_template.format(item)
     print(command)
     call(command, shell=True)
