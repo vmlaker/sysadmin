@@ -12,7 +12,9 @@ Running OSs and stuff.
 * `Red Hat EL 6 <README.rhel-6.rst>`_
 * `Raspberry Pi 2 <README.rpi.rst>`_
 * `Ubuntu 14.04 <README.ubuntu-14.04.rst>`_
+* `Windows 10 <README.windows10.rst>`_
 * `Xubuntu 14.04 <README.xubuntu-14.04.rst>`_
+
 
 `Git stuff <README.git.rst>`_
 -----------------------------
