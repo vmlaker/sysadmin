@@ -10,4 +10,5 @@ Mount drives
 ::
 
    mkdir /mnt/d
-   mount -t drvfs D: /mnt/d
+   mount -t drvfs D: /mnt/d -o metadata
+   
