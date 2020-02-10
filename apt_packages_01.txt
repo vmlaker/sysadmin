@@ -1,0 +1,4 @@
+emacs
+git
+tcsh
+tkdiff
