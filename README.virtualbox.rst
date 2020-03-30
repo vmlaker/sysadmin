@@ -16,3 +16,8 @@ Settings
 * Audio->Audio Controller: ICH AC97
 * Audio->Extended Features: Both checked
 * Shared Folders: Add host drive...
+
+Add user to group:
+::
+
+   usermod -a -G vboxsf <username>
