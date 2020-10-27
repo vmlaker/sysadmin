@@ -1,9 +1,7 @@
 Git
 ===
-
 Moving a subdirectory from one repo into a whole new repo
 ---------------------------------------------------------
-
 So you want to create a brand new repository containing
 files from a subdirectory in an existing repository,
 while preserving history.
@@ -22,7 +20,6 @@ First move the directory ``repo1/foo/bar``:
    git clone repo1 repo1-clone
    cd repo1-clone
    git filter-branch --prune-empty --subdirectory-filter foo/bar
-
 
 Now create a new empty repo called ``repo2``.
 
@@ -44,3 +41,26 @@ Finally, create the master branch, and push:
    git branch master
    git checkout master
    git push origin master
+
+Frequent commands
+-----------------
+Query commands:
+::
+
+   git branch -r                           # Show all remote branches.
+   git log origin/master..HEAD             # Show logs for unpushed commits.
+   git diff --stat --cached origin/master  # Show files to be pushed.
+
+Checkout commands:
+::
+   
+   git checkout -t origin/bug-42  # Checkout remote branch bug-42, and track it.
+   git checkout -b bug-57         # Create a new local branch bug-57 and navigate to it.
+   git push origin bug-57         # Push the new local branch to remote server.
+   
+Gitk:
+::
+
+   gitk --all
+   gitk --remotes-origin
+   
