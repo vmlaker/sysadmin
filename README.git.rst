@@ -63,3 +63,14 @@ Gitk:
 
    gitk --all
    gitk --remotes origin
+   
+Merging branches:
+::
+
+   git diff ...xxx                   # Preview changes that would result from a merge.
+   git diff ...xxx --name-only       # Preview files that would be changed.
+   
+   git merge xxx                     # Merge branch xxx into current branch.
+   git merge --no-commit xxx         # Merge, but without committing.
+   git merge --no-commit -no-ff xxx  # Merge, but without comitting or fast-forwarding.
+   git merge --abort                 # Abort the merge.
