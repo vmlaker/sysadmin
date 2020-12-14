@@ -62,5 +62,4 @@ Gitk:
 ::
 
    gitk --all
-   gitk --remotes-origin
-   
+   gitk --remotes origin
