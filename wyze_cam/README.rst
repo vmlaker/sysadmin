@@ -31,24 +31,26 @@ Copy custom firmware (CFW) to the SD card:
 
 Install the bootloader SD card
 ------------------------------
-Remove power cable.
-Insert SD card.
-Hold down the setup button.
-Plug in power cable.
-Observe the initial amber light.
-After five seconds, observe the light turn blue.
-After five more seconds, release setup button.
-After 30 more seconds, observe the following sequence of events occur within about five secons:
-   Light turns amber.
-   Camera clicks.
-   Light turns blue.
-   LIght turns amber, and stays.
-Unplug camera.
-Remove SD card.
-Plug in camera.
-Audible click and amber light.
-After five seconds, light turns blue.
-After 30 seconds, light turns amber.
+#. Remove power cable.
+#. Insert SD card.
+#. Hold down the setup button.
+#. Plug in power cable.
+#. Observe the initial amber light.
+#. After five seconds, observe the light turn blue.
+#. After five more seconds, release setup button.
+#. After 30 more seconds, observe the following sequence of events occur within about five secons:
+   
+   #. Light turns amber.
+   #. Camera clicks.
+   #. Light turns blue.
+   #. LIght turns amber, and stays.
+    
+#. Unplug camera.
+#. Remove SD card.
+#. Plug in camera.
+#. Audible click and amber light.
+#. After five seconds, light turns blue.
+#. After 30 seconds, light turns amber.
 
 Install the CFW
 ---------------
@@ -59,4 +61,6 @@ Install the CFW
 
 SSH into camera
 ---------------
-ssh root@<hostname>  # Password=ismart12
+::
+
+   ssh root@<hostname>  # Password=ismart12
